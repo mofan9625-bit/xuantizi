@@ -1,0 +1,24 @@
+# Cloudflare Pages & Netlify Silent Routing Rule
+# Support clean URLs (/page and /page.html) silently without redirect loops
+
+/airports/top-brands    /airports/top-brands.html    200
+/airports/iepl-lines    /airports/iepl-lines.html    200
+/airports/budget-ondemand /airports/budget-ondemand.html 200
+/coupons                /coupons/index.html          200
+/posts                  /posts/index.html            200
+/posts/global-iplc-benchmark-2026 /posts/global-iplc-benchmark-2026.html 200
+/posts/iplc-iepl-bgp-difference-guide /posts/iplc-iepl-bgp-difference-guide.html 200
+/posts/monthly-vs-annual-subscription-guide /posts/monthly-vs-annual-subscription-guide.html 200
+/posts/clash-singbox-hysteria2-config-guide /posts/clash-singbox-hysteria2-config-guide.html 200
+/posts/2026-global-lines-benchmark /posts/2026-global-lines-benchmark.html 200
+/posts/reviews/yunjiexian   /posts/reviews/yunjiexian.html   200
+/posts/reviews/dalaoyun     /posts/reviews/dalaoyun.html     200
+/posts/reviews/huanqiuti    /posts/reviews/huanqiuti.html    200
+/posts/reviews/shenxing     /posts/reviews/shenxing.html     200
+/posts/reviews/liulianyun   /posts/reviews/liulianyun.html   200
+/posts/reviews/shandianshu  /posts/reviews/shandianshu.html  200
+/posts/reviews          /posts/index.html            200
+/posts/reviews/         /posts/index.html            200
+/about/disclaimer           /about/disclaimer.html           200
+/about/methodology          /about/methodology.html          200
+/about/benchmarks           /about/benchmarks.html           200

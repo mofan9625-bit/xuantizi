@@ -1,0 +1,23 @@
+{
+  "SITE_NAME": "极客云测",
+  "SITE_DOMAIN": "yourdomain.com",
+  "INDEXNOW_KEY": "a1b2c3d4e5f67890",
+  "BRAND_NAME_1": "速鹰专线",
+  "AFF_LINK_1": "https://example.com/aff/brand1",
+  "COUPON_CODE_1": "GEEK2026",
+  "BRAND_NAME_2": "海螺专线",
+  "AFF_LINK_2": "https://example.com/aff/brand2",
+  "COUPON_CODE_2": "NAIL2026",
+  "BRAND_NAME_3": "轻量云",
+  "AFF_LINK_3": "https://example.com/aff/brand3",
+  "COUPON_CODE_3": "SAVE10",
+  "BRAND_NAME_4": "全速Anycast",
+  "AFF_LINK_4": "https://example.com/aff/brand4",
+  "COUPON_CODE_4": "SPEED15",
+  "BRAND_NAME_5": "守候云备用",
+  "AFF_LINK_5": "https://example.com/aff/brand5",
+  "COUPON_CODE_5": "BACKUP25",
+  "BRAND_NAME_6": "极光原生IP",
+  "AFF_LINK_6": "https://example.com/aff/brand6",
+  "COUPON_CODE_6": "NATIVE20"
+}

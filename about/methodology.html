@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>专线评测标准与量化评分体系 (2026版) - 选梯指南 (PickNode)</title>
+  <meta name="description" content="选梯指南官方量化评测体系。公开 5 大核心维度打分权重、晚高峰多线程压测模型、真实物理链路核验与一票否决淘汰红线。">
+  <meta name="keywords" content="专线评测标准, 机场打分体系, 量化评分模型, 晚高峰压测方法, 选梯指南, E-E-A-T">
+  <link rel="canonical" href="https://xuantizhinan.vip/about/methodology.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="专线评测标准与量化评分体系 (2026版) - 选梯指南 (PickNode)">
+  <meta property="og:description" content="公开 5 大核心维度量化权重、晚高峰 168 小时压测模型与一票否决黑名单红线。">
+  <meta property="og:url" content="https://xuantizhinan.vip/about/methodology.html">
+  <meta property="og:site_name" content="选梯指南">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Schema.org WebPage & BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://xuantizhinan.vip/" },
+          { "@type": "ListItem", "position": 2, "name": "关于与合规", "item": "https://xuantizhinan.vip/about/methodology.html" },
+          { "@type": "ListItem", "position": 3, "name": "评测标准与方法论", "item": "https://xuantizhinan.vip/about/methodology.html" }
+        ]
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://xuantizhinan.vip/about/methodology.html#webpage",
+        "headline": "专线评测标准与量化评分体系 (2026版)",
+        "description": "选梯指南对跨境物理专线与机场服务的 5 大核心维度量化打分标准与淘汰机制。",
+        "datePublished": "2026-10-15T10:00:00+08:00",
+        "dateModified": "2026-10-15T15:50:00+08:00",
+        "publisher": { "@type": "Organization", "name": "选梯指南 (PickNode)" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- 顶部导航 Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" aria-label="选梯指南 首页">
+        <span class="logo-icon-svg" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
+        <span>选梯指南</span>
+        <span class="version-badge">2026 基准</span>
+      </a>
+
+      <button class="mobile-menu-toggle" aria-label="切换导航菜单" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="../index.html" class="nav-link">首页</a></li>
+        <li class="nav-item">
+          <a href="../airports/top-brands.html" class="nav-link">
+            核心榜单
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="../airports/top-brands.html">🏆 年度品牌总榜 (Top 6)</a></li>
+            <li><a href="../airports/iepl-lines.html">⚡ IEPL / IPLC 顶级专线</a></li>
+            <li><a href="../airports/budget-ondemand.html">💰 平价月付与按量合集</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../coupons/index.html" class="nav-link">独家优惠码</a></li>
+        <li class="nav-item"><a href="../posts/index.html" class="nav-link">深度评测</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="../airports/top-brands.html" class="btn-fast-cta">
+          <span>品牌总榜</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 文章正文区域 -->
+  <main class="article-container">
+    <nav class="breadcrumb">
+      <a href="../index.html">首页</a>
+      <span>/</span>
+      <span>关于与合规</span>
+      <span>/</span>
+      <span style="color: var(--text-primary);">评测标准与评分体系</span>
+    </nav>
+
+    <header class="article-header">
+      <div class="article-category">METHODOLOGY & BENCHMARK · 评测方法论</div>
+      <h1 class="article-title">专线评测标准与量化评分体系 (2026 规范版)</h1>
+      <div class="article-meta">
+        <span>制定主体: 选梯指南实验室</span>
+        <span>·</span>
+        <span>实施版本: v2026.4</span>
+        <span>·</span>
+        <span>最后修订: 2026-10-15</span>
+        <span>·</span>
+        <span style="color: var(--accent-green);">● 全开源量化公式</span>
+      </div>
+    </header>
+
+    <article class="article-body">
+      <!-- 极客核心速览 Callout -->
+      <div class="callout callout-success">
+        <div class="callout-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span>评测宗旨：拒绝刷量假测速，以稳定抖动与真实链路为准绳</span>
+        </div>
+        <p style="margin: 0; font-size: 0.92rem; line-height: 1.6;">
+          市面上大量测速博主只在凌晨人少时截一张“千兆跑满”的 Speedtest 仪表盘，掩盖了晚高峰严重丢包、倍率暗坑与虚假专线等黑产套路。选梯指南评测实验室建立了一套<strong>多维度权重数学模型</strong>，将测试数据量化为百分制得分，杜绝主观臆断。
+        </p>
+      </div>
+
+      <h2>一、五大核心审计维度与权重分配模型</h2>
+      <p>
+        每个被审计品牌的最终总得分（Score，满分 100 分）由以下五大模块加权计算得出：
+        <br>
+        <code>总得分 = (晚高峰抗压 × 35%) + (专线物理架构 × 20%) + (落地纯净度 × 15%) + (运维SLA × 15%) + (价格透明度 × 15%)</code>
+      </p>
+
+      <div class="table-wrapper">
+        <table class="benchmark-table">
+          <thead>
+            <tr>
+              <th style="width: 22%;">审计核心维度</th>
+              <th style="width: 14%;">权重占比</th>
+              <th style="width: 32%;">实测考核指标与采信手段</th>
+              <th style="width: 32%;">极客打分标准与扣分惩戒</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. 晚高峰抗压与低抖动</strong></td>
+              <td><strong style="color: var(--accent-amber);">35%</strong></td>
+              <td>
+                20:00~23:00 全民晚高峰期间，连续 168 小时多线程发包。统计 <strong>P95 RTT 抖动标准差</strong>与<strong>骨干丢包率</strong>。
+              </td>
+              <td>
+                P95 抖动 &lt; 2.5ms、丢包 &lt; 0.1% 记满分；抖动 &gt; 15ms 或丢包 &gt; 3% 扣减 50% 权重分。
+              </td>
+            </tr>
+            <tr>
+              <td><strong>2. 真实物理专线与抗封协议</strong></td>
+              <td><strong>20%</strong></td>
+              <td>
+                使用 NextTrace 追踪回程路由，识别是否为端到端内网跨境外层（无公网 GFW IP 跳数）。协议支持 Shadowsocks / Trojan / Hysteria2。
+              </td>
+              <td>
+                纯物理 IEPL/IPLC 记满分；公网中转伪充专线直接扣除本项全部 20 分并触发警告。
+              </td>
+            </tr>
+            <tr>
+              <td><strong>3. 落地纯净度与流媒体/AI解锁</strong></td>
+              <td><strong>15%</strong></td>
+              <td>
+                检测出口 IP 属性（原生 Residential 住宅 ISP vs IDC 机房）。Scamalytics 欺诈风险评分。测试 Netflix 原生、ChatGPT 4o、Claude 3.5 解锁。
+              </td>
+              <td>
+                原生家庭住宅 IP 且无 Cloudflare 5 秒盾记满分；AI 工具大面积报 403 拦截按比例扣分。
+              </td>
+            </tr>
+            <tr>
+              <td><strong>4. 运维 SLA 与工单响应</strong></td>
+              <td><strong>15%</strong></td>
+              <td>
+                入口冗余节点数、上游光缆阻断时备用通道秒级自愈能力、官方状态监控页透明度、人工技术工单回复平均时效。
+              </td>
+              <td>
+                具备多地 BGP 异地容灾与 1 小时内工单响应记满分；突发故障失联超 12 小时重扣。
+              </td>
+            </tr>
+            <tr>
+              <td><strong>5. 价格透明度与无套路</strong></td>
+              <td><strong>15%</strong></td>
+              <td>
+                计算单 GB 真实落地折算成本、核验全节点倍率设置（是否隐藏 3x~10x 扣费节点）、多端并发在线数合理性。
+              </td>
+              <td>
+                所有节点明确标注 1.0x 倍率、支持月付试水记满分；暗设高倍率刺客扣除全部 15 分。
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>二、量化评级划分标准</h2>
+      <p>根据最终加权得分，选梯指南将受测服务商划分为严格的五个等级：</p>
+      <ul>
+        <li><strong style="color: var(--accent-green);">S+ 级（得分 ≥ 98.0）：</strong>年度绝对旗舰标杆。全端物理专线直连、P95 抖动 &lt; 2.0ms、原生住宅 IP 全绿解锁，适合跨国研发与高强度生产力。</li>
+        <li><strong style="color: var(--accent-green);">S 级（95.0 ≤ 得分 &lt; 98.0）：</strong>主流稳定推荐首选。晚高峰极少出现卡顿断流，计费良心透明，适合团队主力与大流量日常。</li>
+        <li><strong style="color: var(--accent-amber);">A 级（85.0 ≤ 得分 &lt; 95.0）：</strong>可用良好等级。部分节点在特殊时段存在轻微抖动，但具备良好的备用容灾体系与亲民定价。</li>
+        <li><strong style="color: #f87171);">B 级（70.0 ≤ 得分 &lt; 85.0）：</strong>谨慎观察等级。存在峰值高但晚高峰严重拥塞、客服响应缓慢或节点倍率偏高问题，不建议作为主力。</li>
+        <li><strong style="color: #ef4444);">C 级（得分 &lt; 70.0）：</strong>不予收录与推荐。严重影响日常使用体验，存在较高不稳定风险。</li>
+      </ul>
+
+      <h2>三、“一票否决”黑名单红线原则</h2>
+      <p>
+        即便某个服务商在峰值速率或日常促销上表现优异，只要触碰以下任一<strong>行业道德与安全红线</strong>，选梯指南评测实验室将立即启动<strong>“一票否决”机制</strong>，即刻从推荐榜单中除名并全站示警：
+      </p>
+
+      <div class="callout callout-warning">
+        <div class="callout-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          <span>选梯指南黑名单四条不可触碰红线</span>
+        </div>
+        <ol style="margin: 0; padding-left: 20px; font-size: 0.92rem; line-height: 1.7;">
+          <li><strong>虚假专线欺诈：</strong>将普通的公网 VPS 端口转发（中转机）虚假包装为“IEPL/IPLC 物理专线”，收取高价专线费用。</li>
+          <li><strong>隐式倍率刺客：</strong>在节点列表中默认不展示倍率，或者在晚高峰将香港/日本等热门节点偷偷提升为 5x~10x 扣费，导致用户几天内流量被恶意扣光。</li>
+          <li><strong>强制年付与资金盘模式：</strong>屏蔽所有月付与季付选项，仅售卖低价数年套餐，通过刷单造势聚集资金，存在极高跑路风险。</li>
+          <li><strong>社群失联与言论封禁：</strong>发生故障时不发官方网络状态通告，并在 Telegram / 用户群内将提出技术质疑的用户大面积禁言或封号。</li>
+        </ol>
+      </div>
+
+      <p style="margin-top: 30px;">
+        我们欢迎广大技术读者与极客用户监督。如果您在日常使用中捕获到上游服务商存在违规行为的抓包证据，欢迎随时向选梯指南评测实验室提交技术反馈，我们将核实并修正评分。
+      </p>
+    </article>
+  </main>
+
+  <!-- 统一 Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- 列 1: 品牌说明 -->
+        <div class="footer-brand">
+          <h4>选梯指南 (PickNode) 评测实验室</h4>
+          <p>
+            坚持客观基准、反对刷量造假。专注于高速专线机场评测、网络协议调优与流媒体解锁研究，为极客用户提供高可靠的跨境网络参考。
+          </p>
+        </div>
+
+        <!-- 列 2: 核心榜单 -->
+        <div class="footer-col">
+          <h5>核心榜单</h5>
+          <ul class="footer-links">
+            <li><a href="../airports/top-brands.html">年度品牌总榜 (Top 6)</a></li>
+            <li><a href="../airports/iepl-lines.html">IEPL 专线精选</a></li>
+            <li><a href="../airports/budget-ondemand.html">平价与按量合集</a></li>
+            <li><a href="../coupons/index.html">独家专属优惠码</a></li>
+          </ul>
+        </div>
+
+        <!-- 列 3: 深度实测与长文 -->
+        <div class="footer-col">
+          <h5>深度评测与指南</h5>
+          <ul class="footer-links">
+            <li><a href="../posts/global-iplc-benchmark-2026.html">全球专线深度横评</a></li>
+            <li><a href="../posts/iplc-iepl-bgp-difference-guide.html">专线原理与避坑指南</a></li>
+            <li><a href="../posts/monthly-vs-annual-subscription-guide.html">月付与年付防跑路指南</a></li>
+          </ul>
+        </div>
+
+        <!-- 列 4: 站点合规 -->
+        <div class="footer-col">
+          <h5>合规说明</h5>
+          <ul class="footer-links">
+            <li><a href="./disclaimer.html">网络中立与免责声明</a></li>
+            <li><a href="./methodology.html">评测标准与方法论</a></li>
+            <li><a href="./benchmarks.html">测速基准与环境说明</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 底部免责声明 -->
+      <div class="footer-bottom">
+        <div class="disclaimer-text" id="disclaimer">
+          <strong>免责声明：</strong>本站所有文章与评测仅供学术研究、外贸跨境电商、跨国研发协同与网络运维调试参考。本站不自建任何翻墙服务，所有外部链接均为第三方服务商。请严格遵守用户所在地相关法律法规，文明合规使用互联网。
+        </div>
+        <div>
+          &copy; 2026 选梯指南 (PickNode). All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
