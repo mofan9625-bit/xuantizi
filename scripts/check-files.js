@@ -2,24 +2,24 @@ const fs = require('fs');
 
 const files = [
   'index.html',
-  'airports/top-brands.html',
-  'airports/iepl-lines.html',
-  'airports/budget-ondemand.html',
+  'airports/top-brands/index.html',
+  'airports/iepl-lines/index.html',
+  'airports/budget-ondemand/index.html',
   'coupons/index.html',
   'posts/index.html',
-  'posts/global-iplc-benchmark-2026.html',
-  'posts/iplc-iepl-bgp-difference-guide.html',
-  'posts/monthly-vs-annual-subscription-guide.html',
-  'posts/clash-singbox-hysteria2-config-guide.html',
-  'posts/reviews/yunjiexian.html',
-  'posts/reviews/dalaoyun.html',
-  'posts/reviews/huanqiuti.html',
-  'posts/reviews/shenxing.html',
-  'posts/reviews/liulianyun.html',
-  'posts/reviews/shandianshu.html',
-  'about/disclaimer.html',
-  'about/methodology.html',
-  'about/benchmarks.html'
+  'posts/global-iplc-benchmark-2026/index.html',
+  'posts/iplc-iepl-bgp-difference-guide/index.html',
+  'posts/monthly-vs-annual-subscription-guide/index.html',
+  'posts/clash-singbox-hysteria2-config-guide/index.html',
+  'posts/reviews/yunjiexian/index.html',
+  'posts/reviews/dalaoyun/index.html',
+  'posts/reviews/huanqiuti/index.html',
+  'posts/reviews/shenxing/index.html',
+  'posts/reviews/liulianyun/index.html',
+  'posts/reviews/shandianshu/index.html',
+  'about/disclaimer/index.html',
+  'about/methodology/index.html',
+  'about/benchmarks/index.html'
 ];
 
 console.log('=== Checking 19 Core Files ===');

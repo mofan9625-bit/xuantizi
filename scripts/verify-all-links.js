@@ -28,7 +28,6 @@ let totalLinksChecked = 0;
 
 htmlFiles.forEach((filePath) => {
   const content = fs.readFileSync(filePath, 'utf8');
-  const fileDir = path.dirname(filePath);
   const relFilePath = path.relative(ROOT_DIR, filePath).replace(/\\/g, '/');
 
   // 1. Asset check in head
@@ -77,24 +76,28 @@ htmlFiles.forEach((filePath) => {
 
     // Resolve target path
     let targetPath;
-    if (pathPart.startsWith('/')) {
-      targetPath = path.join(ROOT_DIR, pathPart);
-    } else {
-      targetPath = path.resolve(fileDir, pathPart);
-    }
-
-    // Check if target file exists
-    let exists = fs.existsSync(targetPath);
-    if (!exists && !pathPart.endsWith('.html')) {
-      // Maybe it refers to directory index.html
-      if (fs.existsSync(path.join(targetPath, 'index.html'))) {
-        exists = true;
-      } else if (fs.existsSync(targetPath + '.html')) {
-        exists = true;
+    if (pathPart === '/' || pathPart === '') {
+      targetPath = path.join(ROOT_DIR, 'index.html');
+    } else if (pathPart.startsWith('/')) {
+      const cleanPath = pathPart.slice(1);
+      const tryDirIndex = path.join(ROOT_DIR, cleanPath, 'index.html');
+      const tryFile = path.join(ROOT_DIR, cleanPath);
+      const tryHtmlFile = path.join(ROOT_DIR, cleanPath + '.html');
+      
+      if (fs.existsSync(tryDirIndex)) {
+        targetPath = tryDirIndex;
+      } else if (fs.existsSync(tryFile)) {
+        targetPath = tryFile;
+      } else if (fs.existsSync(tryHtmlFile)) {
+        targetPath = tryHtmlFile;
+      } else {
+        targetPath = tryDirIndex;
       }
+    } else {
+      targetPath = path.resolve(path.dirname(filePath), pathPart);
     }
 
-    if (!exists) {
+    if (!fs.existsSync(targetPath)) {
       deadLinks.push({
         sourceFile: relFilePath,
         href: href,
@@ -121,10 +124,10 @@ if (deadLinks.length === 0) {
 }
 
 if (relativeLinks.length === 0) {
-  console.log(`✅ 路径规范: 100% 站内链接已采用标准绝对根路径 (/...)！杜绝域名拼接！`);
+  console.log(`✅ 路径规范: 100% 站内链接已采用标准目录根路径 (/.../)！彻底消除重定向死循环！`);
 } else {
   passed = false;
-  console.error(`❌ 发现 ${relativeLinks.length} 个相对路径链接（需改为绝对根路径）：`);
+  console.error(`❌ 发现 ${relativeLinks.length} 个非根路径链接：`);
   relativeLinks.forEach((r) => console.error(`  - 源文件: ${r.sourceFile} -> 链接: ${r.href}`));
 }
 

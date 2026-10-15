@@ -17,30 +17,30 @@ const URL_LIST = [
   'https://xuantizhinan.vip/',
 
   // 2. 核心榜单与聚合索引页
-  'https://xuantizhinan.vip/airports/top-brands.html',
-  'https://xuantizhinan.vip/airports/iepl-lines.html',
-  'https://xuantizhinan.vip/airports/budget-ondemand.html',
+  'https://xuantizhinan.vip/airports/top-brands/',
+  'https://xuantizhinan.vip/airports/iepl-lines/',
+  'https://xuantizhinan.vip/airports/budget-ondemand/',
   'https://xuantizhinan.vip/coupons/',
   'https://xuantizhinan.vip/posts/',
 
   // 3. 4 篇技术长文与科普指南
-  'https://xuantizhinan.vip/posts/global-iplc-benchmark-2026.html',
-  'https://xuantizhinan.vip/posts/iplc-iepl-bgp-difference-guide.html',
-  'https://xuantizhinan.vip/posts/monthly-vs-annual-subscription-guide.html',
-  'https://xuantizhinan.vip/posts/clash-singbox-hysteria2-config-guide.html',
+  'https://xuantizhinan.vip/posts/global-iplc-benchmark-2026/',
+  'https://xuantizhinan.vip/posts/iplc-iepl-bgp-difference-guide/',
+  'https://xuantizhinan.vip/posts/monthly-vs-annual-subscription-guide/',
+  'https://xuantizhinan.vip/posts/clash-singbox-hysteria2-config-guide/',
 
   // 4. 6 篇品牌独立深度审计评测
-  'https://xuantizhinan.vip/posts/reviews/yunjiexian.html',
-  'https://xuantizhinan.vip/posts/reviews/dalaoyun.html',
-  'https://xuantizhinan.vip/posts/reviews/huanqiuti.html',
-  'https://xuantizhinan.vip/posts/reviews/shenxing.html',
-  'https://xuantizhinan.vip/posts/reviews/liulianyun.html',
-  'https://xuantizhinan.vip/posts/reviews/shandianshu.html',
+  'https://xuantizhinan.vip/posts/reviews/yunjiexian/',
+  'https://xuantizhinan.vip/posts/reviews/dalaoyun/',
+  'https://xuantizhinan.vip/posts/reviews/huanqiuti/',
+  'https://xuantizhinan.vip/posts/reviews/shenxing/',
+  'https://xuantizhinan.vip/posts/reviews/liulianyun/',
+  'https://xuantizhinan.vip/posts/reviews/shandianshu/',
 
   // 5. 3 篇 E-E-A-T 信任基石合规说明页
-  'https://xuantizhinan.vip/about/disclaimer.html',
-  'https://xuantizhinan.vip/about/methodology.html',
-  'https://xuantizhinan.vip/about/benchmarks.html'
+  'https://xuantizhinan.vip/about/disclaimer/',
+  'https://xuantizhinan.vip/about/methodology/',
+  'https://xuantizhinan.vip/about/benchmarks/'
 ];
 
 const payload = JSON.stringify({

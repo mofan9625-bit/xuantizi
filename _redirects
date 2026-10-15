@@ -1,28 +1,29 @@
-# Cloudflare Pages 200 Internal Rewrite Rules
-# Serves clean URLs without extension silently (200 status) to prevent redirect loops
+# Cloudflare Pages Redirect Rules
+# Permanent 301 Redirects from legacy .html paths to modern directory slash paths
 
-/airports/top-brands                        /airports/top-brands.html                        200
-/airports/iepl-lines                        /airports/iepl-lines.html                        200
-/airports/budget-ondemand                   /airports/budget-ondemand.html                   200
-/coupons                                    /coupons/index.html                              200
-/posts                                      /posts/index.html                                200
+/index.html                                      /                                            301
+/airports/top-brands.html                        /airports/top-brands/                        301
+/airports/iepl-lines.html                        /airports/iepl-lines/                        301
+/airports/budget-ondemand.html                   /airports/budget-ondemand/                   301
+/coupons/index.html                              /coupons/                                    301
+/posts/index.html                                /posts/                                      301
 
 # Guide Articles
-/posts/global-iplc-benchmark-2026           /posts/global-iplc-benchmark-2026.html           200
-/posts/iplc-iepl-bgp-difference-guide       /posts/iplc-iepl-bgp-difference-guide.html       200
-/posts/monthly-vs-annual-subscription-guide /posts/monthly-vs-annual-subscription-guide.html 200
-/posts/clash-singbox-hysteria2-config-guide /posts/clash-singbox-hysteria2-config-guide.html 200
-/posts/2026-global-lines-benchmark         /posts/2026-global-lines-benchmark.html         200
+/posts/global-iplc-benchmark-2026.html           /posts/global-iplc-benchmark-2026/           301
+/posts/iplc-iepl-bgp-difference-guide.html       /posts/iplc-iepl-bgp-difference-guide/       301
+/posts/monthly-vs-annual-subscription-guide.html /posts/monthly-vs-annual-subscription-guide/ 301
+/posts/clash-singbox-hysteria2-config-guide.html /posts/clash-singbox-hysteria2-config-guide/ 301
+/posts/2026-global-lines-benchmark.html         /posts/2026-global-lines-benchmark/         301
 
 # Brand Reviews
-/posts/reviews/yunjiexian                   /posts/reviews/yunjiexian.html                   200
-/posts/reviews/dalaoyun                     /posts/reviews/dalaoyun.html                     200
-/posts/reviews/huanqiuti                    /posts/reviews/huanqiuti.html                    200
-/posts/reviews/shenxing                     /posts/reviews/shenxing.html                     200
-/posts/reviews/liulianyun                   /posts/reviews/liulianyun.html                   200
-/posts/reviews/shandianshu                  /posts/reviews/shandianshu.html                  200
+/posts/reviews/yunjiexian.html                   /posts/reviews/yunjiexian/                   301
+/posts/reviews/dalaoyun.html                     /posts/reviews/dalaoyun/                     301
+/posts/reviews/huanqiuti.html                    /posts/reviews/huanqiuti/                    301
+/posts/reviews/shenxing.html                     /posts/reviews/shenxing/                     301
+/posts/reviews/liulianyun.html                   /posts/reviews/liulianyun/                   301
+/posts/reviews/shandianshu.html                  /posts/reviews/shandianshu/                  301
 
 # Compliance & About Pages
-/about/disclaimer                           /about/disclaimer.html                           200
-/about/methodology                          /about/methodology.html                          200
-/about/benchmarks                           /about/benchmarks.html                           200
+/about/disclaimer.html                           /about/disclaimer/                           301
+/about/methodology.html                          /about/methodology/                          301
+/about/benchmarks.html                           /about/benchmarks/                           301
