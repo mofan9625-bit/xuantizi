@@ -39,4 +39,7 @@ server {
     add_header X-Content-Type-Options "nosniff" always;
     add_header X-Frame-Options "SAMEORIGIN" always;
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # 引入 AFF 推广链接 301 永久重定向与合规隔离配置
+    include /var/www/SITE_DOMAIN/nginx-redirects.conf;
 }

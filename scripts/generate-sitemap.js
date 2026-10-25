@@ -54,7 +54,7 @@ function scanHtmlFiles(dir, base = '') {
   let results = [];
   const list = fs.readdirSync(dir);
   for (const file of list) {
-    if (file === 'node_modules' || file.startsWith('.') || file === 'review-template' || file === '2026-global-lines-benchmark') continue;
+    if (file === 'node_modules' || file.startsWith('.') || file === 'go.html' || file === 'review-template' || file === '2026-global-lines-benchmark') continue;
     const fullPath = path.join(dir, file);
     const relPath = path.join(base, file).replace(/\\/g, '/');
     const stat = fs.statSync(fullPath);

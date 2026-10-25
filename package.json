@@ -8,6 +8,7 @@
     "sitemap": "node scripts/generate-sitemap.js",
     "push-indexnow": "node scripts/push-indexnow.js",
     "replace": "node scripts/replace-placeholders.js",
+    "verify:links": "node scripts/verify_compliance.js",
     "serve": "npx serve ."
   },
   "keywords": [

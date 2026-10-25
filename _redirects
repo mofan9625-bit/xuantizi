@@ -1,5 +1,7 @@
-# Cloudflare Pages Redirect Rules
-# Permanent 301 Redirects from legacy .html paths to modern directory slash paths
+# Cloudflare Pages / Netlify Redirect Rules
+# ==============================================================================
+# 1. Permanent 301 Redirects from legacy .html paths to modern directory slash paths
+# ==============================================================================
 
 /index.html                                      /                                            301
 /airports/top-brands.html                        /airports/top-brands/                        301
@@ -27,3 +29,27 @@
 /about/disclaimer.html                           /about/disclaimer/                           301
 /about/methodology.html                          /about/methodology/                          301
 /about/benchmarks.html                           /about/benchmarks/                           301
+
+# ==============================================================================
+# 2. Affiliate 301 Redirects (安全隔离外链，防止权重流失与爬虫抓取)
+# ==============================================================================
+
+# 品牌别名 301 重定向
+/go/yunjiexian                                   https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L 301!
+/go/dalaoyun                                     https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V     301!
+/go/huanqiuti                                    https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU    301!
+/go/shenxing                                     https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK     301!
+/go/liulianyun                                   https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR      301!
+/go/shandianshu                                  https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg  301!
+
+# 数字 ID 别名 301 重定向
+/go/1                                            https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L 301!
+/go/2                                            https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V     301!
+/go/3                                            https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU    301!
+/go/4                                            https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK     301!
+/go/5                                            https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR      301!
+/go/6                                            https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg  301!
+
+# 默认回退
+/go                                              /airports/top-brands/                                302
+/go/                                             /airports/top-brands/                                302
