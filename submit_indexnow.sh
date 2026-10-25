@@ -7,8 +7,8 @@
 set -e
 
 HOST="xuantizhinan.vip"
-KEY="xuantizhinan2026key"
-KEY_LOCATION="https://xuantizhinan.vip/xuantizhinan-key.txt"
+KEY="0eb9a05c7328adaa6d7dc403aede8750"
+KEY_LOCATION="https://xuantizhinan.vip/0eb9a05c7328adaa6d7dc403aede8750.txt"
 
 echo "--------------------------------------------------------"
 echo "🚀 正在向 IndexNow 推送 ${HOST} 全站 URL 列表..."

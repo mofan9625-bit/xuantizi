@@ -102,13 +102,16 @@ node scripts/replace-placeholders.js
 在项目根目录运行以下 Node.js 脚本：
 
 ```bash
-# 1. 重新扫描全站并生成最新的 sitemap.xml
+# 1. 完整构建、同步静态资源并自动向 IndexNow 推送全站最新 URL
+npm run build
+
+# 2. 重新扫描全站并生成最新的 sitemap.xml
 npm run sitemap
 
-# 2. 向 Bing / IndexNow API 实时批量推送所有最新页面
+# 3. 向 Bing / IndexNow API 实时批量推送所有最新页面
 npm run push-indexnow
 
-# 3. 本地启动轻量预览服务器
+# 4. 本地启动轻量预览服务器
 npm run serve
 ```
 

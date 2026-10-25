@@ -4,6 +4,7 @@
   "description": "High-SEO, High-Conversion Geek Minimalist Static Blog for Benchmark and Affiliate Recommendations",
   "main": "index.html",
   "scripts": {
+    "build": "node scripts/build.js",
     "sitemap": "node scripts/generate-sitemap.js",
     "push-indexnow": "node scripts/push-indexnow.js",
     "replace": "node scripts/replace-placeholders.js",

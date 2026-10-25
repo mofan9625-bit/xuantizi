@@ -8,8 +8,8 @@
 const https = require('https');
 
 const HOST = 'xuantizhinan.vip';
-const KEY = 'xuantizhinan2026key';
-const KEY_LOCATION = 'https://xuantizhinan.vip/xuantizhinan-key.txt';
+const KEY = '0eb9a05c7328adaa6d7dc403aede8750';
+const KEY_LOCATION = 'https://xuantizhinan.vip/0eb9a05c7328adaa6d7dc403aede8750.txt';
 
 // 全站核心已发布 URL 矩阵
 const URL_LIST = [
