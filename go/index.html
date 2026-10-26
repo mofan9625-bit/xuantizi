@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>正在安全跳转至合作伙伴官网 - 选梯指南</title>
+  
+  <!-- 严格屏蔽搜索引擎抓取与收录 -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="referrer" content="no-referrer">
+  
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-primary, #09090b);
+      color: var(--text-primary, #f4f4f5);
+      font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .redirect-card {
+      background: var(--bg-surface, #121217);
+      border: 1px solid var(--border-subtle, #1f1f28);
+      border-radius: var(--radius-lg, 12px);
+      padding: 40px 32px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .redirect-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b);
+    }
+
+    .status-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--accent-blue-bg, rgba(59, 130, 246, 0.12));
+      color: var(--accent-blue, #3b82f6);
+    }
+
+    .status-icon svg {
+      width: 28px;
+      height: 28px;
+      animation: spin 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .target-brand {
+      display: inline-block;
+      font-weight: 700;
+      color: var(--accent-green, #10b981);
+      font-size: 1.15rem;
+      margin: 0 4px;
+    }
+
+    .redirect-progress-bar {
+      width: 100%;
+      height: 6px;
+      background: var(--border-subtle, #1f1f28);
+      border-radius: 999px;
+      margin: 24px 0 16px;
+      overflow: hidden;
+    }
+
+    .redirect-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.8s ease;
+      border-radius: 999px;
+    }
+
+    .countdown-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary, #a1a1aa);
+      margin-bottom: 24px;
+      font-family: var(--font-mono, monospace);
+    }
+
+    .btn-manual {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 20px;
+      background: #10b981;
+      color: #050507;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: var(--radius-md, 8px);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-manual:hover {
+      background: #059669;
+      transform: translateY(-1px);
+    }
+
+    .safety-notice {
+      margin-top: 24px;
+      font-size: 0.78rem;
+      color: var(--text-muted, #71717a);
+      line-height: 1.5;
+    }
+
+    .error-box {
+      display: none;
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.9rem;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="redirect-card">
+    <div class="status-icon" id="statusIcon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+      </svg>
+    </div>
+
+    <h2 style="font-size: 1.25rem; margin-bottom: 8px; font-weight: 600;">选梯指南 · 安全中转</h2>
+    <p style="font-size: 0.92rem; color: var(--text-secondary, #a1a1aa); margin-bottom: 0;" id="redirectMsg">
+      正在为您直达 <span class="target-brand" id="brandName">合作伙伴官网</span>...
+    </p>
+
+    <div class="redirect-progress-bar">
+      <div class="redirect-progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="countdown-text" id="countdownNotice">
+      安全握手检测中...
+    </div>
+
+    <a href="#" id="directLink" class="btn-manual" rel="nofollow sponsored noopener noreferrer">
+      <span>若未自动跳转，请点击此处直达 &rarr;</span>
+    </a>
+
+    <div class="error-box" id="errorBox">
+      未找到指定的目标机场配置，或该链接已下线。
+      <br><br>
+      <a href="/" style="color: #3b82f6; text-decoration: underline;">返回选梯指南首页 &rarr;</a>
+    </div>
+
+    <div class="safety-notice">
+      🔒 选梯指南已启用 SSL 链路安全隔离与无痕隐私保护机制<br>
+      本次重定向为 301 赞助商合规推荐链接 (Sponsored)
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      // 官方白名单映射表 (防 Open Redirect 漏洞)
+      var AFF_MAP = {
+        'yunjiexian': {
+          name: '云界线 (全专线旗舰)',
+          url: 'https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L'
+        },
+        'dalaoyun': {
+          name: '大佬云 (老牌大厂多端并发)',
+          url: 'https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V'
+        },
+        'huanqiuti': {
+          name: '环球梯 (弱网高抗拥塞)',
+          url: 'https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU'
+        },
+        'shenxing': {
+          name: '神行加速 (轻量按量月付)',
+          url: 'https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK'
+        },
+        'liulianyun': {
+          name: '榴莲云 (高性价比备用)',
+          url: 'https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR'
+        },
+        'shandianshu': {
+          name: '闪电鼠 (极速突发低门槛)',
+          url: 'https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg'
+        },
+        // 数字别名兼容
+        '1': {
+          name: '云界线 (全专线旗舰)',
+          url: 'https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L'
+        },
+        '2': {
+          name: '大佬云 (老牌大厂多端并发)',
+          url: 'https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V'
+        },
+        '3': {
+          name: '环球梯 (弱网高抗拥塞)',
+          url: 'https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU'
+        },
+        '4': {
+          name: '神行加速 (轻量按量月付)',
+          url: 'https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK'
+        },
+        '5': {
+          name: '榴莲云 (高性价比备用)',
+          url: 'https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR'
+        },
+        '6': {
+          name: '闪电鼠 (极速突发低门槛)',
+          url: 'https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg'
+        }
+      };
+
+      // 1. 解析 URL query 参数
+      var urlParams = new URLSearchParams(window.location.search);
+      var targetId = urlParams.get('id') || urlParams.get('brand') || urlParams.get('target');
+      
+      // 2. 如果没有 query，尝试 hash 例如 /go.html#yunjiexian
+      if (!targetId && window.location.hash) {
+        targetId = window.location.hash.replace('#', '').trim();
+      }
+
+      // 3. 如果仍没有，尝试从路径提取例如 /go/yunjiexian
+      if (!targetId && window.location.pathname) {
+        var pathSegments = window.location.pathname.split('/').filter(Boolean);
+        var goIndex = pathSegments.indexOf('go');
+        if (goIndex !== -1 && pathSegments.length > goIndex + 1) {
+          targetId = pathSegments[goIndex + 1].replace(/\.html$/i, '').trim();
+        }
+      }
+
+      if (targetId) {
+        targetId = targetId.toLowerCase().trim();
+      }
+
+      var targetConfig = targetId ? AFF_MAP[targetId] : null;
+
+      var brandNameEl = document.getElementById('brandName');
+      var directLinkEl = document.getElementById('directLink');
+      var progressFillEl = document.getElementById('progressFill');
+      var countdownNoticeEl = document.getElementById('countdownNotice');
+      var errorBoxEl = document.getElementById('errorBox');
+      var statusIconEl = document.getElementById('statusIcon');
+      var redirectMsgEl = document.getElementById('redirectMsg');
+
+      if (targetConfig && targetConfig.url) {
+        brandNameEl.textContent = targetConfig.name;
+        directLinkEl.href = targetConfig.url;
+
+        // 启动进度条动画
+        setTimeout(function () {
+          if (progressFillEl) progressFillEl.style.width = '100%';
+        }, 30);
+
+        countdownNoticeEl.textContent = '检测完毕，正在为您无缝接入官网...';
+
+        // 极速安全重定向
+        setTimeout(function () {
+          window.location.replace(targetConfig.url);
+        }, 150);
+      } else {
+        // 无效参数或未在白名单中
+        statusIconEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>';
+        redirectMsgEl.style.display = 'none';
+        if (progressFillEl && progressFillEl.parentElement) progressFillEl.parentElement.style.display = 'none';
+        countdownNoticeEl.style.display = 'none';
+        directLinkEl.style.display = 'none';
+        errorBoxEl.style.display = 'block';
+      }
+    })();
+  </script>
+</body>
+</html>

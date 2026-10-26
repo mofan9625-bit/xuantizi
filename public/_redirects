@@ -31,25 +31,26 @@
 /about/benchmarks.html                           /about/benchmarks/                           301
 
 # ==============================================================================
-# 2. Affiliate 301 Redirects (安全隔离外链，防止权重流失与爬虫抓取)
+# 2. Affiliate 302 Redirects (安全隔离外链，秒级直达官网)
 # ==============================================================================
 
-# 品牌别名 301 重定向
-/go/yunjiexian                                   https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L 301!
-/go/dalaoyun                                     https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V     301!
-/go/huanqiuti                                    https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU    301!
-/go/shenxing                                     https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK     301!
-/go/liulianyun                                   https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR      301!
-/go/shandianshu                                  https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg  301!
+# 品牌别名 302 重定向
+/go/yunjiexian                                   https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L 302
+/go/dalaoyun                                     https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V     302
+/go/huanqiuti                                    https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU    302
+/go/shenxing                                     https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK     302
+/go/liulianyun                                   https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR      302
+/go/shandianshu                                  https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg  302
 
-# 数字 ID 别名 301 重定向
-/go/1                                            https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L 301!
-/go/2                                            https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V     301!
-/go/3                                            https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU    301!
-/go/4                                            https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK     301!
-/go/5                                            https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR      301!
-/go/6                                            https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg  301!
+# 数字 ID 别名 302 重定向
+/go/1                                            https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L 302
+/go/2                                            https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V     302
+/go/3                                            https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU    302
+/go/4                                            https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK     302
+/go/5                                            https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR      302
+/go/6                                            https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg  302
 
-# 默认回退
-/go                                              /airports/top-brands/                                302
-/go/                                             /airports/top-brands/                                302
+# 中转页兼容重写 (支持带 query 参数的 /go 与 /go/)
+/go                                              /go/index.html                                       200
+/go/                                             /go/index.html                                       200
+

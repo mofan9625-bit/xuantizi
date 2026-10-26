@@ -238,20 +238,29 @@
         }
       };
 
-      // 解析 URL query 参数或 hash 参数
+      // 1. 解析 URL query 参数
       var urlParams = new URLSearchParams(window.location.search);
       var targetId = urlParams.get('id') || urlParams.get('brand') || urlParams.get('target');
       
-      // 如果没有 query，尝试 hash 例如 /go.html#yunjiexian
+      // 2. 如果没有 query，尝试 hash 例如 /go.html#yunjiexian
       if (!targetId && window.location.hash) {
         targetId = window.location.hash.replace('#', '').trim();
       }
 
-      if (targetId) {
-        targetId = targetId.toLowerCase();
+      // 3. 如果仍没有，尝试从路径提取例如 /go/yunjiexian
+      if (!targetId && window.location.pathname) {
+        var pathSegments = window.location.pathname.split('/').filter(Boolean);
+        var goIndex = pathSegments.indexOf('go');
+        if (goIndex !== -1 && pathSegments.length > goIndex + 1) {
+          targetId = pathSegments[goIndex + 1].replace(/\.html$/i, '').trim();
+        }
       }
 
-      var targetConfig = AFF_MAP[targetId];
+      if (targetId) {
+        targetId = targetId.toLowerCase().trim();
+      }
+
+      var targetConfig = targetId ? AFF_MAP[targetId] : null;
 
       var brandNameEl = document.getElementById('brandName');
       var directLinkEl = document.getElementById('directLink');
@@ -267,20 +276,20 @@
 
         // 启动进度条动画
         setTimeout(function () {
-          progressFillEl.style.width = '100%';
-        }, 50);
+          if (progressFillEl) progressFillEl.style.width = '100%';
+        }, 30);
 
         countdownNoticeEl.textContent = '检测完毕，正在为您无缝接入官网...';
 
-        // 极速重定向并保护无痕状态
+        // 极速安全重定向
         setTimeout(function () {
           window.location.replace(targetConfig.url);
-        }, 400);
+        }, 150);
       } else {
         // 无效参数或未在白名单中
         statusIconEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>';
         redirectMsgEl.style.display = 'none';
-        progressFillEl.parentElement.style.display = 'none';
+        if (progressFillEl && progressFillEl.parentElement) progressFillEl.parentElement.style.display = 'none';
         countdownNoticeEl.style.display = 'none';
         directLinkEl.style.display = 'none';
         errorBoxEl.style.display = 'block';

@@ -3,7 +3,7 @@
  * 
  * Complies with:
  * - Google Search Central / FTC Sponsored Guidelines
- * - 301 In-site Redirect (/go.html?id=xxx)
+ * - 302 In-site Redirect (/go/xxx)
  * - Mandatory rel="nofollow sponsored noopener noreferrer"
  */
 
@@ -57,8 +57,8 @@ function getAllTargetFiles(dir) {
       results = results.concat(getAllTargetFiles(fullPath));
     } else {
       const ext = path.extname(item).toLowerCase();
-      // Exclude go.html and config files from self-replacement
-      if (['.html', '.md'].includes(ext) && item !== 'go.html') {
+      // Exclude go files and config files from self-replacement
+      if (['.html', '.md'].includes(ext) && !fullPath.includes('go.html') && !fullPath.includes(path.join('go', 'index.html'))) {
         results.push(fullPath);
       }
     }
@@ -70,7 +70,7 @@ function processTag(tagHtml, targetId) {
   let newTag = tagHtml;
 
   // 1. 替换 href 属性
-  newTag = newTag.replace(/href=["'][^"']+["']/i, `href="/go.html?id=${targetId}"`);
+  newTag = newTag.replace(/href=["'][^"']+["']/i, `href="/go/${targetId}"`);
 
   // 2. 确保 target="_blank"
   if (/target=["'][^"']+["']/i.test(newTag)) {
@@ -117,7 +117,7 @@ function runBatchReplacement() {
         const mdLinkRegex = new RegExp(`\\[([^\\]]+)\\]\\(${aff.url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\)`, 'g');
         content = content.replace(mdLinkRegex, (match, text) => {
           fileReplacedCount++;
-          return `[${text}](/go.html?id=${aff.id})`;
+          return `[${text}](/go/${aff.id})`;
         });
       }
     }

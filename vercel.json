@@ -31,19 +31,17 @@
     }
   ],
   "redirects": [
-    { "source": "/go/yunjiexian", "destination": "https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L", "permanent": true },
-    { "source": "/go/dalaoyun", "destination": "https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V", "permanent": true },
-    { "source": "/go/huanqiuti", "destination": "https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU", "permanent": true },
-    { "source": "/go/shenxing", "destination": "https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK", "permanent": true },
-    { "source": "/go/liulianyun", "destination": "https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR", "permanent": true },
-    { "source": "/go/shandianshu", "destination": "https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg", "permanent": true },
-    { "source": "/go/1", "destination": "https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L", "permanent": true },
-    { "source": "/go/2", "destination": "https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V", "permanent": true },
-    { "source": "/go/3", "destination": "https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU", "permanent": true },
-    { "source": "/go/4", "destination": "https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK", "permanent": true },
-    { "source": "/go/5", "destination": "https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR", "permanent": true },
-    { "source": "/go/6", "destination": "https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg", "permanent": true },
-    { "source": "/go", "destination": "/airports/top-brands/", "permanent": false },
-    { "source": "/go/", "destination": "/airports/top-brands/", "permanent": false }
+    { "source": "/go/yunjiexian", "destination": "https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L", "permanent": false },
+    { "source": "/go/dalaoyun", "destination": "https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V", "permanent": false },
+    { "source": "/go/huanqiuti", "destination": "https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU", "permanent": false },
+    { "source": "/go/shenxing", "destination": "https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK", "permanent": false },
+    { "source": "/go/liulianyun", "destination": "https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR", "permanent": false },
+    { "source": "/go/shandianshu", "destination": "https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg", "permanent": false },
+    { "source": "/go/1", "destination": "https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L", "permanent": false },
+    { "source": "/go/2", "destination": "https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V", "permanent": false },
+    { "source": "/go/3", "destination": "https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU", "permanent": false },
+    { "source": "/go/4", "destination": "https://vipmofan01.shenxingaff.com/#/?code=nn4ohwnK", "permanent": false },
+    { "source": "/go/5", "destination": "https://mofan88.liulianyunaff.com/#/?code=ETsQBSuR", "permanent": false },
+    { "source": "/go/6", "destination": "https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg", "permanent": false }
   ]
 }

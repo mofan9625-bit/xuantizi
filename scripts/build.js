@@ -28,7 +28,7 @@ if (fs.existsSync(PUBLIC_DIR)) {
   publicFiles.forEach(file => {
     const src = path.join(PUBLIC_DIR, file);
     const dest = path.join(ROOT_DIR, file);
-    fs.copyFileSync(src, dest);
+    fs.cpSync(src, dest, { recursive: true, force: true });
     console.log(`   ✓ 同步: public/${file} -> ${file}`);
   });
 } else {
