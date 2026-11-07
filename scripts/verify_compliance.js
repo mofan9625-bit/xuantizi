@@ -4,6 +4,7 @@ const path = require('path');
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 const AFF_URLS = [
+  'https://lier01.yunjiexianaff.com/#/?code=xPthfI62',
   'https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L',
   'https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V',
   'https://mofanvip01.huanqiutiaff.com/#/?code=l7oLmjVU',

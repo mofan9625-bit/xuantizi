@@ -5,8 +5,9 @@ const ROOT_DIR = path.join(__dirname, '..');
 
 const URL_MAP = {
   // 云界线
-  'https://yunjiexian.com/aff?code=xuantizhinan': 'https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L',
-  'https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L': 'https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L',
+  'https://yunjiexian.com/aff?code=xuantizhinan': 'https://lier01.yunjiexianaff.com/#/?code=xPthfI62',
+  'https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L': 'https://lier01.yunjiexianaff.com/#/?code=xPthfI62',
+  'https://lier01.yunjiexianaff.com/#/?code=xPthfI62': 'https://lier01.yunjiexianaff.com/#/?code=xPthfI62',
 
   // 大佬云
   'https://dalaoyun.com/aff?code=xuantizhinan': 'https://mofanvip01.dalaoyunaff.com/#/?code=QT2rqp5V',
@@ -29,7 +30,7 @@ const URL_MAP = {
   'https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg': 'https://mofanvip01.shandianshuaff.com/#/?code=a3GAQAXg',
 
   // 模板中的测试链接
-  'https://example.com/aff?code=xuantizhinan': 'https://9625mofan01.yunjiexianaff.com/#/?code=OOYhSj0L'
+  'https://example.com/aff?code=xuantizhinan': 'https://lier01.yunjiexianaff.com/#/?code=xPthfI62'
 };
 
 function scanAndReplace(dir) {
